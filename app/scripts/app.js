@@ -19,10 +19,12 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngFeathers'
+    'ngFeathers',
+    'color.picker'
   ])
   .config(function ($routeProvider,FeathersProvider) {
-     FeathersProvider.defaults.server = config.server
+     FeathersProvider.defaults.server = config.server;
+     FeathersProvider.defaults.idProperty = 'id';
 
     $routeProvider
       .when('/', {
@@ -34,6 +36,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/light', {
+        templateUrl: 'views/light.html',
+        controller: 'LightCtrl',
+        controllerAs: 'light'
       })
       .otherwise({
         redirectTo: '/'

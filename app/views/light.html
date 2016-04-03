@@ -1,0 +1,16 @@
+<div class="row">
+	
+	<div class="row">
+	<h2>Luces</h2>
+		<a class="btn btn-lg btn-default" href="" ng-click="toggleRelay(1)" ng-class="{'btn-success':relay1 === 'on'}">Relay1</a>
+		<a class="btn btn-lg btn-default" href="" ng-click="toggleRelay(2)" ng-class="{'btn-success':relay2 === 'on'}">Relay2</a>
+		<a class="btn btn-lg btn-default" href="" ng-click="toggleRelay(3)" ng-class="{'btn-success':relay3 === 'on'}">Relay3</a>
+		<a class="btn btn-lg btn-default" href="" ng-click="toggleRelay(4)" ng-class="{'btn-success':relay4 === 'on'}">Relay4</a>
+		<a class="btn btn-lg btn-default" href="" ng-click="toggleRelay(5)" ng-class="{'btn-success':relay5 === 'on'}">Relay5</a>
+		<a class="btn btn-lg btn-default" href="" ng-click="toggleRelay(6)" ng-class="{'btn-success':relay6 === 'on'}">Relay6</a>
+	</div>
+	<div class="row">
+	<h2>Lampara de color</h2>
+		<color-picker color-picker-format=" 'hex'" ng-model="color"  color-picker-on-change="onColorChange($event, color)" ></color-picker>
+	</div>
+</div>
